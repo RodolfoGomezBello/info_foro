@@ -7,7 +7,7 @@ function Profile() {
     const [error, setError] = useState(null);
 
     const { token } = useAuth("state");
-    console.log (token);
+   
     useEffect(() => {
         fetch(
             `${import.meta.env.VITE_API_BASE_URL}users/profiles/profile_data/`,
@@ -67,18 +67,7 @@ function Profile() {
                                         alignItems: "center",
                                     }}
                                 >
-                                    <img
-                                        src={`${
-                                            import.meta.env.VITE_API_BASE_URL
-                                        }${userData.state.icon}`}
-                                        alt="State icon"
-                                        style={{
-                                            height: "20px",
-                                            marginRight: "5px",
-                                            borderRadius: "50%",
-                                        }}
-                                    />
-                                    {userData.state.name}
+                                   
                                 </div>
                             </div>
                         </div>
